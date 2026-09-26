@@ -22,19 +22,10 @@ public interface TestConfiguration extends Config {
 
     Integer timeout();
 
-    String baseApiUrl();
-
     String crmApiUrl();
 
     String authLogin();
 
     String authPassword();
 
-    String appUserEndpoint();
-
-    String dbUrl();
-
-    String dbUser();
-
-    String dbPassword();
 }
