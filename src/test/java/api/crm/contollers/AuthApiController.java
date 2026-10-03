@@ -1,11 +1,11 @@
 package api.crm.contollers;
 
-import api.crm.pojo.request.ApiUserPost;
-import api.crm.specification.ApiSpec;
 import api.crm.enums.ApiEndPoints;
 import api.crm.enums.StatusCode;
+import api.crm.pojo.request.ApiUserPost;
+import api.crm.specification.ApiSpec;
+import assertions.AssertableResponse;
 import io.qameta.allure.Step;
-import io.restassured.response.ValidatableResponse;
 import utils.CreateRandomData;
 
 import java.util.List;
@@ -16,20 +16,18 @@ import static io.restassured.RestAssured.given;
 public class AuthApiController {
 
     @Step("Отправка запроса на авторизацию под API юзером")
-    public static ValidatableResponse getUser() {
-        return given()
+        public static AssertableResponse getUser() {
+        return new AssertableResponse(given()
                 .spec(ApiSpec.authApi())
                 .get(ApiEndPoints.AUTH_CRM.getPath())
-                .then();
+                .then());
     }
 
     @Step("Отправка запроса на создание нового API юзера")
     public static String createApiUserAndGetKey() {
         ApiUserPost apiUser = CreateRandomData.getRandomApiUser();
-
         String roleId = getRoleIdByName("Admin");
         apiUser.setRolesIds(List.of(roleId));
-
         return given()
                 .spec(authAdmin())
                 .body(apiUser)

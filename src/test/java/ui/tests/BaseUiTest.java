@@ -1,33 +1,26 @@
-package ui.crm.tests;
+package ui.tests;
 
 import com.codeborne.selenide.Selenide;
 import config.DriverConfiguration;
+import extensions.AllureExtensions;
 import extensions.TestLoggingExtension;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import static com.codeborne.selenide.Selenide.open;
-
-@Slf4j
-@ExtendWith({TestLoggingExtension.class})
-public abstract class BaseUiTest {
-
+@ExtendWith({AllureExtensions.class,TestLoggingExtension.class})
+public class BaseUiTest {
 
     protected final String login = "admin";
     protected final String password = "admin";
 
     @BeforeAll
     public static void setup() {
-        log.info("Инициализация тестового окружения");
         DriverConfiguration.setupDriver();
     }
 
     @AfterAll
     public static void close() {
-        log.info("Закрытие тестового окружения");
         Selenide.closeWebDriver();
     }
 }
-

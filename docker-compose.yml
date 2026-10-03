@@ -1,8 +1,7 @@
 services:
-
   espocrm-db:
     image: mariadb:11.4
-    container_name: espocrm-api.crm.db
+    container_name: espocrm-db
 
     environment:
       MARIADB_ROOT_PASSWORD: root_password
@@ -14,7 +13,7 @@ services:
       - "3307:3306"
 
     volumes:
-      - espocrm-api.crm.db:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
 
     healthcheck:
       test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
@@ -38,7 +37,7 @@ services:
 
     environment:
       ESPOCRM_DATABASE_PLATFORM: Mysql
-      ESPOCRM_DATABASE_HOST: espocrm-api.crm.db
+      ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_NAME: espocrm
       ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
@@ -120,5 +119,3 @@ volumes:
 
 networks:
   espocrm_net:
-    # external: true
-    # name: espocrm_default

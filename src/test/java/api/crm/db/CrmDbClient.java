@@ -54,7 +54,6 @@ public class CrmDbClient {
     }
 
     public static ApiUser getApiKeyFromDb() {
-
         ApiUser user = getUserFromDb();
         if (user != null && user.getApiKey() != null && !user.getApiKey().isBlank()) {
             return user;
