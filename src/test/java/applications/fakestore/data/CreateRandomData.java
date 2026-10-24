@@ -1,6 +1,6 @@
 package applications.fakestore.data;
 
-import applications.api.crm.pojo.request.UserCrmPost;
+import applications.api.pojo.UserCrmPost;
 import applications.fakestore.pojo.request.UserPost;
 
 import static utils.RandomUtils.FAKER;

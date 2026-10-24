@@ -1,7 +1,7 @@
 package applications.fakestore.tests;
 
 import annotations.Run;
-import applications.api.crm.enums.StatusCode;
+import applications.api.enums.StatusCode;
 import applications.fakestore.controllers.ProductController;
 import applications.fakestore.controllers.UserController;
 import applications.fakestore.data.CreateProduct;
@@ -16,7 +16,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import ru.testit.annotations.ExternalId;
 import ru.testit.annotations.Step;
-import ru.testit.annotations.Title;
 import ru.testit.annotations.WorkItemIds;
 
 import java.util.List;

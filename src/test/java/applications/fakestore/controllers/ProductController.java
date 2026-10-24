@@ -1,6 +1,6 @@
 package applications.fakestore.controllers;
 
-import applications.api.crm.enums.ApiEndPoints;
+import applications.api.enums.ApiEndPoints;
 import applications.fakestore.pojo.request.ProductPost;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;

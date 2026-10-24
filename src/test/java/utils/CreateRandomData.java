@@ -1,7 +1,7 @@
 package utils;
 
-import applications.api.crm.pojo.request.ApiUserPost;
-import applications.api.crm.pojo.request.UserCrmPost;
+import applications.api.pojo.ApiUserPost;
+import applications.api.pojo.UserCrmPost;
 import ru.testit.annotations.Step;
 import ru.testit.annotations.Title;
 
