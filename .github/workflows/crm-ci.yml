@@ -91,7 +91,7 @@ jobs:
             --workdir /workspace \
             -v "${MAVEN_CACHE_VOLUME}:/root/.m2" \
             "$TEST_IMAGE" \
-            mvn -B -ntp test \
+            mvn -B -ntp clean test \
             "-DbaseUiUrl=${CRM_URL}" \
             "-DcrmApiUrl=${CRM_URL}" \
             "-DdbUrl=jdbc:mariadb://espocrm-db:3306/espocrm" \
