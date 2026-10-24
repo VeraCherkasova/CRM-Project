@@ -1,7 +1,9 @@
 package utils;
 
-import api.crm.pojo.request.ApiUserPost;
-import api.crm.pojo.request.UserCrmPost;
+import applications.api.crm.pojo.request.ApiUserPost;
+import applications.api.crm.pojo.request.UserCrmPost;
+import ru.testit.annotations.Step;
+import ru.testit.annotations.Title;
 
 import java.util.List;
 
@@ -9,6 +11,8 @@ import static utils.RandomUtils.FAKER;
 
 public class CreateRandomData {
 
+    @Step
+    @Title("Создание нового рандомного пользователя")
     public static UserCrmPost getRandomCrmUser() {
         return UserCrmPost.builder()
                 .userName(FAKER.internet().username())
@@ -20,6 +24,8 @@ public class CreateRandomData {
                 .build();
     }
 
+    @Step
+    @Title("Создание нового рандомного пользователя")
     public static ApiUserPost getRandomApiUser() {
         return ApiUserPost.builder()
                 .userName(FAKER.internet().username())
