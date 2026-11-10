@@ -1,4 +1,4 @@
-package applications.api.crm.dto;
+package applications.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

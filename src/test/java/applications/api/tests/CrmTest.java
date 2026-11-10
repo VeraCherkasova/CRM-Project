@@ -1,12 +1,12 @@
-package applications.api.crm.tests;
+package applications.api.tests;
 
 import annotations.Run;
-import applications.api.crm.contollers.AuthApiController;
-import applications.api.crm.contollers.CrmUserController;
-import applications.api.crm.db.CrmDbClient;
-import applications.api.crm.dto.ApiUser;
-import applications.api.crm.enums.StatusCode;
-import applications.api.crm.pojo.request.UserCrmPost;
+import applications.api.contollers.AuthApiController;
+import applications.api.contollers.CrmUserController;
+import applications.api.db.CrmDbClient;
+import applications.api.dto.ApiUser;
+import applications.api.enums.StatusCode;
+import applications.api.pojo.UserCrmPost;
 import assertions.Conditions;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +14,6 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.RetryingTest;
 import ru.testit.annotations.ExternalId;
 import ru.testit.annotations.Step;
-import ru.testit.annotations.Title;
 import ru.testit.annotations.WorkItemIds;
 import utils.CreateRandomData;
 

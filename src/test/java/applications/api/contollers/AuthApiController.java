@@ -1,9 +1,9 @@
-package applications.api.crm.contollers;
+package applications.api.contollers;
 
-import applications.api.crm.enums.ApiEndPoints;
-import applications.api.crm.enums.StatusCode;
-import applications.api.crm.pojo.request.ApiUserPost;
-import applications.api.crm.specification.ApiSpec;
+import applications.api.enums.ApiEndPoints;
+import applications.api.enums.StatusCode;
+import applications.api.pojo.ApiUserPost;
+import applications.api.specification.ApiSpec;
 import assertions.AssertableResponse;
 import io.qameta.allure.Step;
 import ru.testit.annotations.Title;
@@ -11,7 +11,7 @@ import utils.CreateRandomData;
 
 import java.util.List;
 
-import static applications.api.crm.specification.ApiSpec.authAdmin;
+import static applications.api.specification.ApiSpec.authAdmin;
 import static io.restassured.RestAssured.given;
 
 public class AuthApiController {

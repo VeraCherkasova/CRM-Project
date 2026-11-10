@@ -1,6 +1,6 @@
-package applications.api.crm.db;
+package applications.api.db;
 
-import applications.api.crm.dto.ApiUser;
+import applications.api.dto.ApiUser;
 import config.ConfigProvider;
 import io.qameta.allure.Step;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static applications.api.crm.contollers.AuthApiController.createApiUserAndGetKey;
+import static applications.api.contollers.AuthApiController.createApiUserAndGetKey;
 
 @Slf4j
 public class CrmDbClient {

@@ -1,8 +1,8 @@
-package applications.api.crm.contollers;
+package applications.api.contollers;
 
-import applications.api.crm.enums.ApiEndPoints;
-import applications.api.crm.pojo.request.UserCrmPost;
-import applications.api.crm.specification.ApiSpec;
+import applications.api.enums.ApiEndPoints;
+import applications.api.pojo.UserCrmPost;
+import applications.api.specification.ApiSpec;
 import assertions.AssertableResponse;
 import io.qameta.allure.Step;
 import ru.testit.annotations.Title;
